@@ -7,7 +7,6 @@ app.use(bodyparser.json());
 var multer = require('multer');
 var upload = multer();
 app.use(upload.array()); 
-app.use(express.static('public'));
 
 const PORT=7000
 const router = require("./routes/router");
