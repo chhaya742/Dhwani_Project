@@ -8,7 +8,7 @@ var multer = require('multer');
 var upload = multer();
 app.use(upload.array()); 
 
-const PORT=7000
+
 const router = require("./routes/router");
 app.use(bodyparser.urlencoded({extended: true}));
 require("dotenv").config();
@@ -17,6 +17,6 @@ require("dotenv").config();
 
 app.use("/", router);
 
-app.listen(PORT, () => {
-  console.log(`SERVER IS RUNNING AT PORT ${PORT}`);
+app.listen(process.env.PORT, () => {
+  console.log(`SERVER IS RUNNING AT PORT ${process.env.PORT}`);
 });
